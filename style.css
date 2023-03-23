@@ -1,0 +1,81 @@
+/* Style for the meme container */
+#meme-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body{
+    background-image: url(https://wallpapercave.com/wp/zJItGT4.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  /* centering the button*/
+  #generate-meme-btn{
+    display:block;
+    margin:0 auto;
+  }
+  /* centering the text boxes */
+    .input-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2px;
+    }
+  
+  /* Style for each individual meme */
+  .meme {
+    margin: 10px;
+    padding: 4px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    height: 100%;
+  }
+  
+  /* Style for the remove button */
+  .meme button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: #f11405;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  /* Style for the meme image */
+  .meme img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style for the meme text */
+  .meme div {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+  }
+  
+  /* Style for the top text */
+  .meme div:nth-of-type(2) {
+    top: 0;
+  }
+  
+  /* Style for the bottom text */
+  .bottom-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+  }
