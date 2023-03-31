@@ -13,15 +13,7 @@ function generateMeme() {
   const topText = topTextInput.value;
   const bottomText = bottomTextInput.value;
   //validating input
-  if (!url || !topText || !bottomText){
-    alert('Please fill out all fields');
-    return;
-  }
-  if (!isValidUrl(url)){
-    alert('Please enter a valid URL');
-    return;
-  }
-  
+  if (url && topText && bottomText && isValidUrl(url)){
   // Creating image
   const memeImg = document.createElement('img');
   memeImg.src = url;
@@ -29,6 +21,7 @@ function generateMeme() {
   // Creating text
   const topTextDiv = document.createElement('div');
   topTextDiv.innerText = topText;
+  topTextDiv.classList.add('top-text');
   const bottomTextDiv = document.createElement('div');
   bottomTextDiv.innerText = bottomText;
   bottomTextDiv.classList.add('bottom-text'); // add the bottom-text class
@@ -50,16 +43,22 @@ function generateMeme() {
 
   // Add the meme to the container
   memeContainer.appendChild(memeDiv);
+  urlInput.value = '';
+  topTextInput.value = '';
+  bottomTextInput.value = '';
+  }else{
+    alert('Please Enter A Valid URL');
+  }
 }
 
 // Attach the generateMeme function to the button click event
 generateMemeBtn.addEventListener('click', generateMeme);
 //Function for checking if valid
-function isValidUrl(url) {
+function isValidUrl(string) {
   try {
-    new URL(url);
+    new URL(string);
     return true;
-  } catch {
+  } catch (_) {
     return false;
   }
 }

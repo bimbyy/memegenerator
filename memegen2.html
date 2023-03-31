@@ -7,20 +7,22 @@
     <link rel="stylesheet" type="text/css" href="style.css" /> 
     <title>Link CSS to HTML</title>
 </head>
-<body>
-<div class = "input-container">
+<body >
+  <form id="meme-form">
+  <div class = "input-container">
     <label>Image URL:</label>
-    <input id="url-input" type="text" />
+    <input id="url-input" type="text" required />
   </div>
   <div class = "input-container">
     <label>Top Text:</label>
-    <input id="top-text-input" type="text" />
+    <input id="top-text-input" type="text" required/>
   </div>
   <div class = "input-container">
     <label>Bottom Text:</label>
-    <input id="bottom-text-input" type="text" />
+    <input id="bottom-text-input" type="text" required/>
   </div>
   <button id="generate-meme-btn">Generate Meme</button>
+  </form>
   <div id="meme-container"></div>
   <script src="memegen2.js"></script>
   </body>
